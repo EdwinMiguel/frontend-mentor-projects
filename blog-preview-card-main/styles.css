@@ -1,0 +1,125 @@
+:root {
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 50%);
+    --Black: hsl(0, 0%, 7%);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Figtree-Italic';
+    src: url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Figtree';
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--Yellow);
+}
+
+.card {
+    margin: 0 auto;
+    width: 320px;
+    height: 500px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: var(--White);
+    padding: 20px;
+    box-shadow: 8px 8px 0px 0px var(--Black);
+}
+
+.card .card__image-container {
+    width: 100%;
+    max-width: 320px;
+    height: 200px;
+}
+
+.card__image-container img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card__button {
+    margin-top: 20px;
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 12px;
+    background-color: var(--Yellow);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--Black);
+    font-weight: 800;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.card__button:hover {
+    color: var(--White);
+    box-shadow: 5px 5px 0px 0px var(--Black);
+}
+
+.card .card__date {
+    font-size: 1.2rem;
+    margin-top: 16px;
+}
+
+.card__title {
+    margin-top: 20px;
+    font-size: 2.0rem;
+    font-weight: 800;
+}
+.card__description {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--Grey);
+}
+
+.card__footer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.card__footer .card__profile-image-container {
+    width: 32px;
+    height: 32px;
+}
+
+.card__profile-image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.card__footer p {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
